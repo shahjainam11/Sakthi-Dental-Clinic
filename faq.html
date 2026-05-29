@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs — Sakthi Dental Clinic, Hosur</title>
+  <meta name="description" content="Get answers to common dental questions at Sakthi Dental Clinic Hosur — pain relief, scaling, root canal, implants, braces, oral hygiene, and more." />
+  <link rel="icon" type="image/png" href="image/SDC Logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: .75rem;
+      border-bottom: 2px solid var(--lavender-100);
+    }
+    .faq-cat-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--gradient-brand);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .faq-cat-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .faq-cat-count {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--brand-primary);
+      background: var(--lavender-100);
+      border-radius: 999px;
+      padding: .15rem .6rem;
+    }
+    .faq-item {
+      border: 1.5px solid var(--lavender-100);
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: .65rem;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .faq-item:hover { border-color: rgba(124,92,191,.25); }
+    .faq-item.open {
+      border-color: rgba(124,92,191,.35);
+      box-shadow: 0 4px 20px rgba(124,92,191,.1);
+    }
+    .faq-question {
+      width: 100%;
+      background: rgba(245,243,255,.5);
+      border: none;
+      padding: 1.1rem 1.35rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: .93rem;
+      color: #1a1a2e;
+      cursor: pointer;
+      text-align: left;
+      gap: 1rem;
+      transition: background .2s;
+      line-height: 1.5;
+    }
+    .faq-question:hover { background: var(--lavender-100); }
+    .faq-item.open .faq-question { background: #fff; color: var(--brand-primary); }
+    .faq-icon {
+      font-size: 1rem;
+      transition: transform .35s ease;
+      flex-shrink: 0;
+      color: #9ca3af;
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .faq-item.open .faq-icon { transform: rotate(180deg); color: var(--brand-primary); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .45s cubic-bezier(.4,0,.2,1);
+    }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding: 0 1.35rem 1.35rem;
+      font-size: .91rem;
+      color: #6b7280;
+      line-height: 1.85;
+      border-top: 1px solid var(--lavender-100);
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="image/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo-img" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <i class="bi bi-list" style="font-size:1.5rem;color:#374151"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn-brand" href="contact.html" style="font-size:.85rem;padding:.6rem 1.4rem">
+            <i class="bi bi-calendar-heart"></i> Fix an Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-hero" style="padding:120px 0 60px">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7 reveal">
+        <span class="section-badge mb-4 d-inline-flex">Patient FAQs</span>
+        <h1 class="display-5 fw-bold mb-4">Your Dental Questions, <span class="gradient-text">Answered</span></h1>
+        <p class="lead text-secondary mb-5" style="max-width:540px">From pain relief to implants, orthodontics, and oral hygiene — find clear, expert answers to the questions our patients ask most.</p>
+        <div class="mx-auto" style="max-width:500px;position:relative">
+          <i class="bi bi-search" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:#9ca3af;z-index:1"></i>
+          <input type="search" id="faqSearch" class="form-control-custom ps-5" placeholder="Search any dental question..." />
+        </div>
+      </div>
+      <div class="col-lg-5 reveal reveal-delay-2 d-none d-lg-block">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="glass-purple p-4 rounded-3 text-center">
+              <div style="font-size:2.2rem;margin-bottom:.5rem">🦷</div>
+              <div class="fw-bold" style="font-size:.88rem">14 FAQs</div>
+              <div class="text-muted" style="font-size:.75rem">Expert Answers</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="glass-purple p-4 rounded-3 text-center">
+              <div style="font-size:2.2rem;margin-bottom:.5rem">💡</div>
+              <div class="fw-bold" style="font-size:.88rem">4 Categories</div>
+              <div class="text-muted" style="font-size:.75rem">Well Organized</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="glass-purple p-4 rounded-3 text-center">
+              <div style="font-size:2.2rem;margin-bottom:.5rem">👩⚕️</div>
+              <div class="fw-bold" style="font-size:.88rem">9 Doctors</div>
+              <div class="text-muted" style="font-size:.75rem">9 Specialists</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="glass-purple p-4 rounded-3 text-center">
+              <div style="font-size:2.2rem;margin-bottom:.5rem">📞</div>
+              <div class="fw-bold" style="font-size:.88rem">Emergency</div>
+              <div class="text-muted" style="font-size:.75rem">Support 9am–7pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ CONTENT -->
+<section class="section-py bg-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- ───────────────────────────────────────────── -->
+        <!-- CATEGORY 1: PAIN & TREATMENT NEEDS -->
+        <!-- ───────────────────────────────────────────── -->
+        <div class="faq-category mb-5 reveal">
+          <div class="faq-cat-header">
+            <div class="faq-cat-icon"><i class="bi bi-bandaid-fill"></i></div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="faq-cat-title">Pain &amp; Treatment Needs</span>
+                <span class="faq-cat-count">4 Questions</span>
+              </div>
+              <div class="text-muted" style="font-size:.8rem">Understanding tooth pain and when to seek care</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can medication completely relieve tooth pain?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Not entirely. While medications may offer short-term relief, long-lasting relief requires identifying and treating the root cause of the pain through professional dental care. We strongly recommend visiting a dentist as soon as possible rather than relying on painkillers alone.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can painful teeth be treated with fillings?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Not always. If the cavity has reached the pulp — the innermost layer of the tooth — a simple filling won't help. In such cases, root canal treatment or tooth extraction might be necessary to eliminate the source of pain and prevent further infection.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is placing a cap or crown necessary after root canal treatment (RCT)?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Yes. A crown is recommended after RCT to protect the treated tooth, which may be weaker due to decay. It prevents fractures and adds durability, especially during chewing. Skipping a crown after RCT significantly increases the risk of the tooth cracking or failing.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can milk teeth need root canal treatment (RCT)?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Yes. If a milk tooth has a deep cavity and is likely to remain in the mouth for some time, an RCT can preserve it and prevent infection or early loss. Keeping milk teeth healthy is important for proper jaw development and guiding permanent teeth into the right position.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ───────────────────────────────────────────── -->
+        <!-- CATEGORY 2: ORAL HYGIENE & PREVENTION -->
+        <!-- ───────────────────────────────────────────── -->
+        <div class="faq-category mb-5 reveal">
+          <div class="faq-cat-header">
+            <div class="faq-cat-icon"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="faq-cat-title">Oral Hygiene &amp; Prevention</span>
+                <span class="faq-cat-count">5 Questions</span>
+              </div>
+              <div class="text-muted" style="font-size:.8rem">Keeping your teeth and gums healthy every day</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Does teeth scaling cause enamel damage, sensitivity, or gaps between teeth?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                No. Scaling safely removes plaque and tartar from teeth and below the gum line. It doesn't damage enamel or create gaps — the sensation of gaps after scaling is simply because built-up tartar is no longer present. Some temporary sensitivity may occur, but it usually subsides as gums heal and reattach to the teeth.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can fluorosis stains be removed through scaling?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Scaling can remove surface (extrinsic) stains but not fluorosis, which is an internal (intrinsic) stain. Fluorosis may require treatments like bleaching, veneers, or crowns for cosmetic improvement. Our cosmetic dentistry team can assess the best option for your case.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How can I maintain good oral hygiene?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Brush your teeth twice daily with proper technique, rinse after meals, floss regularly, and schedule routine check-ups with your dentist. Avoid excessive sugary foods and drinks, and drink plenty of water. Consistency in your oral hygiene routine is key to preventing most dental problems.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Which type of toothbrush and toothpaste should I use?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Use a soft or medium-bristled toothbrush with a small head to reach all areas comfortably. Choose a non-abrasive fluoride toothpaste appropriate for your needs (sensitivity, whitening, etc.) and replace your toothbrush every three months or sooner if the bristles are frayed.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What causes tooth sensitivity?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Tooth sensitivity can result from enamel wear due to acidic foods or over-brushing, tooth decay, exposed tooth roots caused by gum recession, or hairline cracks in the teeth. Sensitivity deserves a professional evaluation to identify the root cause and determine the right treatment.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ───────────────────────────────────────────── -->
+        <!-- CATEGORY 3: ORTHODONTICS & ALIGNMENT -->
+        <!-- ───────────────────────────────────────────── -->
+        <div class="faq-category mb-5 reveal">
+          <div class="faq-cat-header">
+            <div class="faq-cat-icon"><i class="bi bi-arrow-left-right"></i></div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="faq-cat-title">Orthodontics &amp; Alignment</span>
+                <span class="faq-cat-count">2 Questions</span>
+              </div>
+              <div class="text-muted" style="font-size:.8rem">Braces, aligners, and straightening your smile</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the best age to get braces?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Braces are most effective between ages 12 and 14, when the jaw and teeth are still developing and respond well to orthodontic forces. However, some cases may benefit from earlier intervention depending on the condition. Adults can also achieve excellent results with braces or clear aligners at any age.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Do all wisdom teeth need to be removed?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                No. Wisdom teeth only require removal if they are impacted, infected, or causing pain due to crowding or damage to adjacent teeth. If your wisdom teeth have erupted properly and are not causing any issues, they can generally be left in place with regular monitoring.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ───────────────────────────────────────────── -->
+        <!-- CATEGORY 4: IMPLANTS, MISSING TEETH & CHECKUPS -->
+        <!-- ───────────────────────────────────────────── -->
+        <div class="faq-category mb-5 reveal">
+          <div class="faq-cat-header">
+            <div class="faq-cat-icon"><i class="bi bi-award-fill"></i></div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="faq-cat-title">Implants, Missing Teeth &amp; Check-ups</span>
+                <span class="faq-cat-count">3 Questions</span>
+              </div>
+              <div class="text-muted" style="font-size:.8rem">Replacing teeth and staying on top of your dental health</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Is it important to replace missing teeth after extraction?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Yes. Replacing extracted teeth helps maintain proper bite alignment and prevents adjacent teeth from drifting or shifting into the gap over time. Missing teeth can also affect jawbone health, facial structure, chewing ability, and speech. Options include implants, bridges, and dentures.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What are the benefits of dental implants?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Dental implants restore both the appearance and full functionality of missing teeth. They provide a stable, natural-looking and feeling solution that preserves jawbone health, improves confidence, and enhances overall quality of life. With proper care, implants can last a lifetime — making them the gold standard for tooth replacement.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              How often should I see a dentist?
+              <span class="faq-icon"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Visiting your dentist every six months is recommended for routine check-ups, professional cleaning, and preventive care. Regular visits allow early detection of potential issues before they become costly or painful. Patients with gum disease, high cavity risk, or ongoing treatments may need to visit more frequently.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STILL HAVE QUESTIONS CTA -->
+        <div class="reveal">
+          <div class="glass-purple p-5 rounded-4 text-center" style="border-radius:1.5rem">
+            <div style="font-size:3rem;margin-bottom:1rem">💬</div>
+            <h4 class="fw-bold mb-2">Still have a question?</h4>
+            <p class="text-secondary mb-4">Our team of specialists is happy to help. Call us or visit the clinic — no question is too small.</p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <a href="tel:+919862890897" class="btn-brand px-4">
+                <i class="bi bi-telephone-fill"></i> Call Us Now
+              </a>
+              <a href="contact.html" class="btn-outline-brand px-4">
+                <i class="bi bi-calendar-heart"></i> Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="pt-1">
+  <div style="height:3px;background:linear-gradient(135deg,#7c5cbf,#4d9de0)"></div>
+  <div class="container py-5">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <a href="index.html"><img src="image/SDC Logo.png" alt="Sakthi Dental Clinic" style="height:64px;object-fit:contain;margin-bottom:1.25rem;display:block" /></a>
+        <p class="text-muted mb-4" style="font-size:.88rem;line-height:1.8">Specialized dental care for women, children, and families since 2004.</p>
+        <div class="d-flex gap-2">
+          <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <a href="index.html" class="footer-link"><span class="footer-dot"></span>Home</a>
+        <a href="about.html" class="footer-link"><span class="footer-dot"></span>About Us</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot"></span>Treatments</a>
+        <a href="faq.html" class="footer-link"><span class="footer-dot"></span>FAQs</a>
+        <a href="contact.html" class="footer-link"><span class="footer-dot"></span>Contact</a>
+        <a href="privacy-policy.html" class="footer-link"><span class="footer-dot"></span>Privacy Policy</a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="footer-heading">Treatments</div>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Teeth Cleaning</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Dental Implants</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Root Canal</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Orthodontics</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Teeth Whitening</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Pediatric Dentistry</a>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading">Contact</div>
+        <div class="d-flex gap-2 mb-3 align-items-start">
+          <i class="bi bi-geo-alt-fill mt-1" style="color:#c4b5fd;flex-shrink:0"></i>
+          <span class="text-muted" style="font-size:.86rem">B2/8, SBM Layout, Anthivadi,<br>Hosur, Tamil Nadu 635109</span>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <i class="bi bi-telephone-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <div>
+            <a href="tel:+919862890897" class="footer-link d-block p-0 mb-0" style="font-size:.86rem">+91 98628 90897</a>
+            <a href="tel:+919363298118" class="footer-link d-block p-0" style="font-size:.86rem">+91 93632 98118</a>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <i class="bi bi-envelope-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <a href="mailto:info@sakthidentalclinic.in" class="footer-link p-0" style="font-size:.86rem">info@sakthidentalclinic.in</a>
+        </div>
+        <div class="d-flex gap-2">
+          <i class="bi bi-clock-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <span class="text-muted" style="font-size:.86rem">Sun – Sat: 9am to 7pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 pt-4 border-top d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3" style="border-color:#1f1f35!important">
+      <p class="text-muted mb-0" style="font-size:.84rem">© 2026 Sakthi Dental Clinic. All rights reserved.</p>
+      <p class="text-muted mb-0" style="font-size:.84rem">Made with <i class="bi bi-heart-fill text-danger"></i> for healthier smiles</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919862890897?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

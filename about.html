@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Sakthi Dental Clinic, Hosur</title>
+  <meta name="description" content="Meet Dr. Anupriya and the specialist team at Sakthi Dental Clinic. 20+ years of trusted dental care for families in Hosur, Tamil Nadu." />
+  <link rel="icon" type="image/png" href="image/SDC Logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── FOUNDER CARD ── */
+    .founder-card {
+      background: linear-gradient(135deg,#7c5cbf 0%,#4d9de0 100%);
+      border-radius: 2rem;
+      padding: 2.5rem 2rem;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(124,92,191,.38);
+    }
+    .founder-card::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+    }
+    .founder-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.06);
+    }
+    .founder-avatar {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      border: 3px solid rgba(255,255,255,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.8rem;
+      margin: 0 auto 1.25rem;
+    }
+    .founder-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 999px;
+      padding: .3rem .9rem;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    /* ── DOCTOR CARD ── */
+    .doctor-card {
+      background: #fff;
+      border: 1.5px solid rgba(196,181,253,.25);
+      border-radius: 1.5rem;
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      height: 100%;
+      transition: all .35s cubic-bezier(.4,0,.2,1);
+      box-shadow: 0 4px 24px rgba(124,92,191,.07);
+      position: relative;
+      overflow: hidden;
+    }
+    .doctor-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg,#7c5cbf,#4d9de0);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .doctor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(124,92,191,.2);
+      border-color: rgba(124,92,191,.3);
+    }
+    .doctor-card:hover::before { opacity: 1; }
+    .doctor-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#ede9fe,#dbeafe);
+      border: 2.5px solid #ddd6fe;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+      transition: transform .3s;
+    }
+    .doctor-card:hover .doctor-avatar { transform: scale(1.08); }
+    .doctor-name { font-weight: 700; font-size: .97rem; color: #1a1a2e; margin-bottom: .3rem; line-height: 1.3; }
+    .doctor-spec {
+      font-size: .8rem;
+      font-weight: 600;
+      color: #7c5cbf;
+      background: rgba(124,92,191,.08);
+      border-radius: 999px;
+      padding: .25rem .75rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="image/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo-img" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+      <i class="bi bi-list" style="font-size:1.5rem;color:#374151"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="btn-brand" href="contact.html" style="font-size:.85rem;padding:.6rem 1.4rem">
+            <i class="bi bi-calendar-heart"></i> Fix an Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-hero" style="padding:120px 0 60px">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 reveal">
+        <span class="section-badge mb-4 d-inline-flex">About Us</span>
+        <h1 class="display-5 fw-bold mb-4">20+ Years of <span class="gradient-text">Trusted Dental Care</span></h1>
+        <p class="lead text-secondary mb-4" style="line-height:1.8">Sakthi Dental Clinic has been Hosur's most trusted dental destination since 2004. Founded by Dr. Anupriya, our clinic was built on a single promise — delivering compassionate, expert-led dental care to women, children, and families with honesty and warmth.</p>
+        <p class="text-secondary mb-5" style="line-height:1.8">Over two decades, we've grown from a single-chair practice to a modern 10-chair multi-specialty clinic serving thousands of patients across Hosur and the greater Tamil Nadu region.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="contact.html" class="btn-brand"><i class="bi bi-calendar-heart"></i> Book Appointment</a>
+          <a href="treatments.html" class="btn-outline-brand">Our Treatments</a>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <div class="glass rounded-4 p-4" style="border-radius:1.75rem">
+          <div class="text-center mb-4">
+            <div style="font-size:5rem;margin-bottom:.5rem">👩⚕️</div>
+            <h2 class="fw-bold fs-3 mb-1">Dr. Anupriya</h2>
+            <div class="gradient-text fw-bold mb-1">Founder &amp; Chief Dental Surgeon</div>
+            <div class="text-muted mb-3" style="font-size:.86rem">BDS, MDS – Prosthodontics</div>
+            <p class="text-secondary" style="font-size:.9rem;line-height:1.75">With over 20 years of clinical experience, Dr. Anupriya leads a team of 9 specialists who share her vision — making quality dental care accessible, affordable, and anxiety-free for every patient who walks through our doors.</p>
+          </div>
+          <div class="row g-3 text-center">
+            <div class="col-4">
+              <div class="p-3 rounded-3" style="background:var(--lavender-50)">
+                <div class="fw-bold gradient-text fs-5">20+</div>
+                <div class="text-muted" style="font-size:.72rem;font-weight:600">Years Exp.</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3 rounded-3" style="background:var(--lavender-50)">
+                <div class="fw-bold gradient-text fs-5">5000+</div>
+                <div class="text-muted" style="font-size:.72rem;font-weight:600">Patients</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3 rounded-3" style="background:var(--lavender-50)">
+                <div class="fw-bold gradient-text fs-5">9</div>
+                <div class="text-muted" style="font-size:.72rem;font-weight:600">Specialists</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATING IMAGE + TEXT -->
+<section class="section-py bg-white">
+  <div class="container">
+
+    <!-- Row 1: Root Canal -->
+    <div class="row align-items-center gy-5 mb-5 pb-5 border-bottom">
+      <div class="col-lg-6 reveal">
+        <span class="section-badge mb-3 d-inline-flex">Advanced Restorative</span>
+        <h2 class="fw-bold mb-4">Root Canal &amp; <span class="gradient-text">Restorative Treatments</span></h2>
+        <p class="text-secondary lh-lg mb-3">We save your natural teeth using the most advanced endodontic techniques. Our root canal treatments are performed with precision and are completely pain-free using modern local anaesthesia protocols.</p>
+        <p class="text-secondary lh-lg mb-4">Every restorative procedure at Sakthi Dental Clinic is carried out with meticulous attention to detail, ensuring durable, aesthetic, and long-lasting results for every patient.</p>
+        <a href="treatments.html" class="btn-brand">Explore Treatments <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <img src="image/Sakthi Dental Clinic/Treatments/Root Canal Treatment.png"
+             alt="Root Canal Treatment at Sakthi Dental Clinic Hosur"
+             loading="lazy"
+             style="width:100%;max-height:380px;object-fit:cover;border-radius:1.5rem;box-shadow:0 20px 60px rgba(124,92,191,.18)" />
+      </div>
+    </div>
+
+    <!-- Row 2: Implants (reversed) -->
+    <div class="row align-items-center gy-5 mb-5 pb-5 border-bottom flex-lg-row-reverse">
+      <div class="col-lg-6 reveal">
+        <span class="section-badge mb-3 d-inline-flex">Implant Excellence</span>
+        <h2 class="fw-bold mb-4">Dental Implants for a <span class="gradient-text">Permanent Solution</span></h2>
+        <p class="text-secondary lh-lg mb-3">Our implantologist brings unparalleled expertise in dental implant surgery to Hosur. We use premium-grade titanium implants with a clinical success rate exceeding 98%.</p>
+        <p class="text-secondary lh-lg mb-4">Implants look, feel, and function exactly like your natural teeth — giving you back your confidence and quality of life permanently, without compromising adjacent teeth.</p>
+        <a href="contact.html" class="btn-outline-brand">Book Consultation <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <img src="image/Sakthi Dental Clinic/Treatments/Impants.png"
+             alt="Dental Implants at Sakthi Dental Clinic Hosur"
+             loading="lazy"
+             style="width:100%;max-height:380px;object-fit:cover;border-radius:1.5rem;box-shadow:0 20px 60px rgba(124,92,191,.18)" />
+      </div>
+    </div>
+
+    <!-- Row 3: Pediatric -->
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6 reveal">
+        <span class="section-badge mb-3 d-inline-flex">Child-Friendly Care</span>
+        <h2 class="fw-bold mb-4">Pediatric Dentistry for <span class="gradient-text">Your Little Ones</span></h2>
+        <p class="text-secondary lh-lg mb-3">We have a dedicated pediatric wing designed to make dental visits fun and completely stress-free for children. Our specialists are trained to handle even the most anxious young patients with gentleness and patience.</p>
+        <p class="text-secondary lh-lg mb-4">Early dental care builds a lifetime of healthy habits. We see children from their very first tooth through adolescence, creating positive dental experiences that last a lifetime.</p>
+        <a href="treatments.html" class="btn-brand">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <img src="image/Sakthi Dental Clinic/Treatments/Pediatric-dentistry.png"
+             alt="Pediatric Dentistry for children at Sakthi Dental Clinic Hosur"
+             loading="lazy"
+             style="width:100%;max-height:380px;object-fit:cover;border-radius:1.5rem;box-shadow:0 20px 60px rgba(124,92,191,.18)" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLINIC HISTORY TIMELINE -->
+<section class="section-py bg-warm">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge mb-3">Our Journey</span>
+      <h2 class="display-6 fw-bold">Two Decades of <span class="gradient-text">Excellence</span></h2>
+      <p class="text-secondary mt-3 mx-auto" style="max-width:480px">From a single chair to a full multi-specialty clinic — our journey has always been guided by one goal: your best smile.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="bi bi-star-fill" style="font-size:.65rem"></i></div>
+            <div class="glass-purple p-4 rounded-3">
+              <span class="section-badge mb-2 d-inline-block" style="font-size:.72rem">2004</span>
+              <h6 class="fw-bold mb-1">The Beginning</h6>
+              <p class="mb-0 text-secondary" style="font-size:.9rem">Dr. Anupriya founded Sakthi Dental Clinic in Hosur with a single vision — providing compassionate, affordable dental care for every family in the region.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-dot"><i class="bi bi-people-fill" style="font-size:.65rem"></i></div>
+            <div class="glass-purple p-4 rounded-3">
+              <span class="section-badge mb-2 d-inline-block" style="font-size:.72rem">2008</span>
+              <h6 class="fw-bold mb-1">Growing the Team</h6>
+              <p class="mb-0 text-secondary" style="font-size:.9rem">Expanded the clinic with advanced diagnostic equipment and recruited a growing team of dental specialists to offer comprehensive multi-specialty care.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-2">
+            <div class="timeline-dot"><i class="bi bi-lightning-fill" style="font-size:.65rem"></i></div>
+            <div class="glass-purple p-4 rounded-3">
+              <span class="section-badge mb-2 d-inline-block" style="font-size:.72rem">2014</span>
+              <h6 class="fw-bold mb-1">Technology Leap</h6>
+              <p class="mb-0 text-secondary" style="font-size:.9rem">Introduced laser dentistry, a dedicated pediatric care wing, and full orthodontic services including braces and clear aligners for all age groups.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-3">
+            <div class="timeline-dot"><i class="bi bi-trophy-fill" style="font-size:.65rem"></i></div>
+            <div class="glass-purple p-4 rounded-3">
+              <span class="section-badge mb-2 d-inline-block" style="font-size:.72rem">2019</span>
+              <h6 class="fw-bold mb-1">5000+ Smiles</h6>
+              <p class="mb-0 text-secondary" style="font-size:.9rem">Celebrated 5000+ satisfied patients and expanded to a modern 10-chair facility with dedicated spaces for each specialty.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal reveal-delay-4">
+            <div class="timeline-dot"><i class="bi bi-heart-fill" style="font-size:.65rem"></i></div>
+            <div class="glass-purple p-4 rounded-3">
+              <span class="section-badge mb-2 d-inline-block" style="font-size:.72rem">2024</span>
+              <h6 class="fw-bold mb-1">20 Years Strong</h6>
+              <p class="mb-0 text-secondary" style="font-size:.9rem">Completed 20 years of transforming smiles across Hosur and the greater Tamil Nadu region, with 9 specialist doctors and 15+ treatment services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION / VISION / PATIENT-CENTRIC -->
+<section class="section-py bg-white">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge mb-3">Our Values</span>
+      <h2 class="display-6 fw-bold">What <span class="gradient-text">Drives Us</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal reveal-delay-1">
+        <div class="service-card h-100">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-4" style="width:56px;height:56px;background:linear-gradient(135deg,#a78bfa,#7c5cbf)">
+            <i class="bi bi-bullseye text-white fs-5"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Our Mission</h4>
+          <p class="text-secondary lh-lg">To provide accessible, compassionate, and high-quality dental care that transforms lives, one smile at a time — with honesty, clinical expertise, and an unwavering patient-first approach.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-2">
+        <div class="service-card h-100">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-4" style="width:56px;height:56px;background:linear-gradient(135deg,#f472b6,#e11d48)">
+            <i class="bi bi-eye-fill text-white fs-5"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Our Vision</h4>
+          <p class="text-secondary lh-lg">To be Tamil Nadu's most trusted and loved dental clinic — known for clinical excellence, genuine empathy, and a welcoming environment where every patient feels truly valued and cared for.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-3">
+        <div class="service-card h-100">
+          <div class="d-flex align-items-center justify-content-center rounded-3 mb-4" style="width:56px;height:56px;background:linear-gradient(135deg,#60a5fa,#4d9de0)">
+            <i class="bi bi-person-heart text-white fs-5"></i>
+          </div>
+          <h4 class="fw-bold mb-3">Patient-Centric Care</h4>
+          <p class="text-secondary lh-lg">We believe dentistry is not just about teeth — it's about confidence, health, and happiness. Every patient deserves personalized care delivered with warmth, respect, and transparency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS SECTION -->
+<section class="section-py bg-hero" id="our-team">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge mb-3">Our Specialists</span>
+      <h2 class="display-6 fw-bold">Meet Our <span class="gradient-text">Expert Team</span></h2>
+      <p class="text-secondary mt-3 mx-auto" style="max-width:520px">Our team of 9 specialists brings expertise, warmth, and dedication to every patient interaction — led by Dr. Anupriya.</p>
+    </div>
+
+    <!-- FOUNDER HIGHLIGHT -->
+    <div class="row justify-content-center mb-5 reveal">
+      <div class="col-sm-10 col-md-6 col-lg-4">
+        <div class="founder-card">
+          <div class="founder-badge">
+            <i class="bi bi-patch-check-fill"></i> Founder &amp; Chief Surgeon
+          </div>
+          <div class="founder-avatar">👩⚕️</div>
+          <h3 class="fw-bold mb-1" style="font-size:1.4rem">Dr. Anupriya</h3>
+          <div style="font-size:.9rem;opacity:.88;margin-bottom:1rem">BDS, MDS – Prosthodontics</div>
+          <p style="font-size:.87rem;opacity:.82;line-height:1.75;margin-bottom:1.5rem">With 20+ years of experience, Dr. Anupriya founded Sakthi Dental Clinic with a mission to bring compassionate, expert dental care to every family in Hosur. Her patient-first philosophy shapes everything we do.</p>
+          <div class="row g-2 text-center">
+            <div class="col-4"><div style="background:rgba(255,255,255,.18);border-radius:.75rem;padding:.6rem .3rem"><div style="font-weight:800;font-size:1rem">20+</div><div style="font-size:.68rem;opacity:.8">Years</div></div></div>
+            <div class="col-4"><div style="background:rgba(255,255,255,.18);border-radius:.75rem;padding:.6rem .3rem"><div style="font-weight:800;font-size:1rem">5000+</div><div style="font-size:.68rem;opacity:.8">Patients</div></div></div>
+            <div class="col-4"><div style="background:rgba(255,255,255,.18);border-radius:.75rem;padding:.6rem .3rem"><div style="font-weight:800;font-size:1rem">9</div><div style="font-size:.68rem;opacity:.8">Specialists</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIALIST GRID -->
+    <div class="row g-4">
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👩⚕️</div>
+          <div class="doctor-name">Dr. Ananya Iyer</div>
+          <span class="doctor-spec">Prosthodontist</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👩⚕️</div>
+          <div class="doctor-name">Dr. Meera Subramanian</div>
+          <span class="doctor-spec">Endodontist</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨⚕️</div>
+          <div class="doctor-name">Dr. Arvind Kumar</div>
+          <span class="doctor-spec">Dental Surgeon</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👩⚕️</div>
+          <div class="doctor-name">Dr. Sneha N</div>
+          <span class="doctor-spec">Orthodontist</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-1">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨⚕️</div>
+          <div class="doctor-name">Dr. Srinivas Rohit Ramanujam</div>
+          <span class="doctor-spec">Implantologist</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-2">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨⚕️</div>
+          <div class="doctor-name">Dr. Balu</div>
+          <span class="doctor-spec">Laser Surgeon</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-3">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨⚕️</div>
+          <div class="doctor-name">Dr. Vikram Raj Kishore</div>
+          <span class="doctor-spec">Aligners Partner</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 reveal reveal-delay-4">
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨⚕️</div>
+          <div class="doctor-name">Dr. Ajay Jumar</div>
+          <span class="doctor-spec">Oral &amp; Maxillofacial Surgeon</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-brand">
+  <div class="container text-center text-white py-4 reveal">
+    <h2 class="fw-bold mb-3">Ready to Experience the Difference?</h2>
+    <p class="mb-5 opacity-75 fs-5">Join thousands of happy patients who trust Sakthi Dental Clinic for their oral health.</p>
+    <a href="contact.html" class="d-inline-flex align-items-center gap-2 fw-bold px-5 py-3 rounded-pill text-decoration-none" style="background:#fff;color:#7c5cbf;font-size:1rem">
+      <i class="bi bi-calendar-heart"></i> Book Your Appointment
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="pt-1">
+  <div style="height:3px;background:linear-gradient(135deg,#7c5cbf,#4d9de0)"></div>
+  <div class="container py-5">
+    <div class="row gy-5">
+      <div class="col-lg-4">
+        <a href="index.html"><img src="image/SDC Logo.png" alt="Sakthi Dental Clinic" style="height:64px;object-fit:contain;margin-bottom:1.25rem;display:block" /></a>
+        <p class="text-muted mb-4" style="font-size:.88rem;line-height:1.8">Specialized dental care for women, children, and families since 2004. Compassionate, expert-led services in a modern environment.</p>
+        <div class="d-flex gap-2">
+          <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-2">
+        <div class="footer-heading">Quick Links</div>
+        <a href="index.html" class="footer-link"><span class="footer-dot"></span>Home</a>
+        <a href="about.html" class="footer-link"><span class="footer-dot"></span>About Us</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot"></span>Treatments</a>
+        <a href="faq.html" class="footer-link"><span class="footer-dot"></span>FAQs</a>
+        <a href="contact.html" class="footer-link"><span class="footer-dot"></span>Contact</a>
+        <a href="privacy-policy.html" class="footer-link"><span class="footer-dot"></span>Privacy Policy</a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="footer-heading">Treatments</div>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Teeth Cleaning &amp; Scaling</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Dental Implants</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Root Canal Therapy</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Orthodontic Braces</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Teeth Whitening</a>
+        <a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Pediatric Dentistry</a>
+      </div>
+      <div class="col-lg-3">
+        <div class="footer-heading">Contact</div>
+        <div class="d-flex gap-2 mb-3 align-items-start">
+          <i class="bi bi-geo-alt-fill mt-1" style="color:#c4b5fd;flex-shrink:0"></i>
+          <span class="text-muted" style="font-size:.86rem">B2/8, SBM Layout, Anthivadi,<br>Hosur, Tamil Nadu 635109</span>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <i class="bi bi-telephone-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <div>
+            <a href="tel:+919862890897" class="footer-link d-block p-0 mb-0" style="font-size:.86rem">+91 98628 90897</a>
+            <a href="tel:+919363298118" class="footer-link d-block p-0" style="font-size:.86rem">+91 93632 98118</a>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <i class="bi bi-envelope-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <a href="mailto:info@sakthidentalclinic.in" class="footer-link p-0" style="font-size:.86rem">info@sakthidentalclinic.in</a>
+        </div>
+        <div class="d-flex gap-2">
+          <i class="bi bi-clock-fill" style="color:#c4b5fd;flex-shrink:0"></i>
+          <span class="text-muted" style="font-size:.86rem">Sun – Sat: 9am to 7pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 pt-4 border-top d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3" style="border-color:#1f1f35!important">
+      <p class="text-muted mb-0" style="font-size:.84rem">© 2026 Sakthi Dental Clinic. All rights reserved.</p>
+      <p class="text-muted mb-0" style="font-size:.84rem">Made with <i class="bi bi-heart-fill text-danger"></i> for healthier smiles</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919862890897?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

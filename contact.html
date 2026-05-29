@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Sakthi Dental Clinic, Hosur</title>
+  <meta name="description" content="Contact Sakthi Dental Clinic in Hosur — book an appointment, find our address, call us, or send us a message. Open daily 9am to 7pm." />
+  <link rel="icon" type="image/png" href="image/SDC Logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="image/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo-img" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list" style="font-size:1.5rem;color:#374151"></i></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="treatments.html">Treatments</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn-brand" href="contact.html" style="font-size:.85rem;padding:.6rem 1.4rem"><i class="bi bi-calendar-heart"></i> Fix an Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTACT BANNER with real image -->
+<div class="contact-banner">
+  <img src="image/Sakthi Dental Clinic/Banner Images/Banner_img_2.jpg"
+       alt="Sakthi Dental Clinic — Contact Us and Book Your Appointment"
+       loading="eager" />
+  <div class="contact-banner-overlay">
+    <div class="text-white reveal">
+      <span class="section-badge mb-3 d-inline-flex" style="background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3);color:#fff">Contact Us</span>
+      <h1 class="fw-bold mb-2" style="font-size:clamp(1.8rem,4vw,2.8rem)">Get in Touch</h1>
+      <p style="opacity:.88;font-size:1.1rem">We're here to help. Book an appointment or ask us anything.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="section-py bg-white">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6 reveal">
+        <div class="glass p-4 p-md-5 rounded-4" style="border-radius:1.75rem">
+          <div id="formCard">
+            <h2 class="fw-bold mb-5">Book an Appointment</h2>
+            <form id="contactForm" novalidate>
+              <div class="mb-4 form-group-custom">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" class="form-control-custom" placeholder="Your full name" />
+                <div class="form-error" id="nameErr">Name is required</div>
+              </div>
+              <div class="mb-4 form-group-custom">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" class="form-control-custom" placeholder="you@email.com" />
+                <div class="form-error" id="emailErr">Valid email is required</div>
+              </div>
+              <div class="mb-4 form-group-custom">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" class="form-control-custom" placeholder="+91 98628 90897" />
+                <div class="form-error" id="phoneErr">Valid phone number is required</div>
+              </div>
+              <div class="mb-5 form-group-custom">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" class="form-control-custom" rows="4" placeholder="Describe your concern or preferred appointment time..."></textarea>
+                <div class="form-error" id="messageErr">Please enter at least 10 characters</div>
+              </div>
+              <button type="submit" id="contact-submit" class="btn-brand w-100 justify-content-center py-3">
+                <i class="bi bi-send-fill"></i> Submit Message
+              </button>
+            </form>
+          </div>
+          <div id="formSuccess" style="display:none" class="text-center py-5">
+            <div style="font-size:4rem;color:#22c55e" class="mb-3"><i class="bi bi-check-circle-fill"></i></div>
+            <h3 class="fw-bold mb-2">Message Sent!</h3>
+            <p class="text-secondary mb-5">Thank you for reaching out. Our team will contact you within 24 hours.</p>
+            <button id="resetForm" class="btn-brand px-5">Send Another Message</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <h2 class="fw-bold mb-2">Clinic Information</h2>
+        <p class="text-secondary mb-4">Visit us, call, or email — we look forward to hearing from you.</p>
+        <div class="d-flex flex-column gap-3">
+          <div class="info-card"><div class="info-icon"><i class="bi bi-geo-alt-fill"></i></div><div><div class="info-label">Address</div><div class="info-value">B2/8, SBM Layout, Anthivadi,
+Hosur, Tamil Nadu 635109, India</div></div></div>
+          <div class="info-card"><div class="info-icon"><i class="bi bi-telephone-fill"></i></div><div><div class="info-label">Phone</div><div class="info-value"><a href="tel:+919862890897" style="color:inherit;text-decoration:none">+91 9862890897</a>
+<a href="tel:+919363298118" style="color:inherit;text-decoration:none">+91 9363298118</a></div></div></div>
+          <div class="info-card"><div class="info-icon"><i class="bi bi-envelope-fill"></i></div><div><div class="info-label">Email</div><div class="info-value"><a href="mailto:info@sakthidentalclinic.in" style="color:inherit;text-decoration:none">info@sakthidentalclinic.in</a></div></div></div>
+          <div class="info-card"><div class="info-icon"><i class="bi bi-clock-fill"></i></div><div><div class="info-label">Hours</div><div class="info-value">Sunday to Saturday
+9:00 AM – 7:00 PM</div></div></div>
+          <div class="p-4 rounded-3 d-flex gap-3 align-items-start" style="background:#fef2f2;border:1px solid #fecaca">
+            <span style="font-size:1.8rem">🚨</span>
+            <div>
+              <div class="fw-bold mb-1" style="color:#dc2626">Dental Emergency?</div>
+              <p class="text-secondary mb-2" style="font-size:.88rem">Call us immediately. We prioritize emergency patients.</p>
+              <a href="tel:+919862890897" class="fw-bold text-decoration-none d-inline-flex align-items-center gap-1" style="color:#dc2626;font-size:.88rem"><i class="bi bi-telephone-fill"></i> +91 98628 90897</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 reveal">
+      <h3 class="fw-bold text-center mb-4">Find Us on the Map</h3>
+      <div style="border-radius:1.5rem;overflow:hidden;box-shadow:var(--shadow-glass);border:1px solid var(--lavender-100)">
+        <iframe title="Sakthi Dental Clinic Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15552.07!2d77.824!3d12.7409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70b1234567%3A0xabcdef1234567890!2sHosur%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="pt-1">
+  <div style="height:3px;background:linear-gradient(135deg,#7c5cbf,#4d9de0)"></div>
+  <div class="container py-5">
+    <div class="row gy-5">
+      <div class="col-lg-4"><a href="index.html"><img src="image/SDC Logo.png" alt="Sakthi Dental Clinic" style="height:64px;object-fit:contain;margin-bottom:1.25rem;display:block" /></a><p class="text-muted mb-4" style="font-size:.88rem;line-height:1.8">Specialized dental care for women, children, and families since 2004.</p><div class="d-flex gap-2"><a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://facebook.com" target="_blank" class="social-btn facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://youtube.com" target="_blank" class="social-btn youtube" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div></div>
+      <div class="col-sm-6 col-lg-2"><div class="footer-heading">Quick Links</div><a href="index.html" class="footer-link"><span class="footer-dot"></span>Home</a><a href="about.html" class="footer-link"><span class="footer-dot"></span>About Us</a><a href="treatments.html" class="footer-link"><span class="footer-dot"></span>Treatments</a><a href="faq.html" class="footer-link"><span class="footer-dot"></span>FAQs</a><a href="contact.html" class="footer-link"><span class="footer-dot"></span>Contact</a><a href="privacy-policy.html" class="footer-link"><span class="footer-dot"></span>Privacy Policy</a></div>
+      <div class="col-sm-6 col-lg-3"><div class="footer-heading">Treatments</div><a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Teeth Cleaning</a><a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Dental Implants</a><a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Root Canal</a><a href="treatments.html" class="footer-link"><span class="footer-dot footer-dot-blue"></span>Orthodontics</a></div>
+      <div class="col-lg-3"><div class="footer-heading">Contact</div><div class="d-flex gap-2 mb-2 align-items-start"><i class="bi bi-geo-alt-fill mt-1" style="color:#c4b5fd;flex-shrink:0"></i><span class="text-muted" style="font-size:.85rem">B2/8, SBM Layout, Anthivadi,<br>Hosur, Tamil Nadu 635109</span></div><div class="d-flex gap-2 mb-2"><i class="bi bi-telephone-fill" style="color:#c4b5fd"></i><a href="tel:+919862890897" class="footer-link p-0" style="font-size:.85rem">+91 98628 90897</a></div><div class="d-flex gap-2"><i class="bi bi-clock-fill" style="color:#c4b5fd"></i><span class="text-muted" style="font-size:.85rem">Sun – Sat: 9am to 7pm</span></div></div>
+    </div>
+    <div class="mt-5 pt-4 border-top d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3" style="border-color:#1f1f35!important">
+      <p class="text-muted mb-0" style="font-size:.84rem">© 2026 Sakthi Dental Clinic. All rights reserved.</p>
+      <p class="text-muted mb-0" style="font-size:.84rem">Made with <i class="bi bi-heart-fill text-danger"></i> for healthier smiles</p>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/919862890897" target="_blank" class="whatsapp-fab" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
